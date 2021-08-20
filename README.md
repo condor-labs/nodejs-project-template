@@ -25,7 +25,7 @@ This template help you to develop your project of NodeJs, on this template you f
 The repository have a basic architecture of three layers, have a folder of controllers, one folder of services and one folder of repositories. Next you can a diagram that represent the architecture:
 
 <p align="center">
-  <img src="https://i.ibb.co/7bfLGDq/Screen-Shot-2021-08-13-at-2-57-11-AM.png" width="300" alt="system model" />
+  <img src="https://i.ibb.co/4mMhgzT/Screen-Shot-2021-08-20-at-1-07-55-AM.png" width="300" alt="system model" />
 </p>
 
 # Installation
