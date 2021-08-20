@@ -3,7 +3,7 @@
   <img src="https://i.ibb.co/gzgp8zj/servlet.png" width="300" alt="CONDORLABS LOGO" />
 </p>
 
-### Basic template for a develop your project with NodeJ using CondorLabs technologies
+### Basic template for a develop your project with NodeJs using CondorLabs technologies
 
 # Description
 
@@ -55,7 +55,7 @@ $ npm run test
 
 ```
 
-# Happy Code <3
+# Happy Code 💛
 
 ## 🐞 Did you find some issue o improvment?
 
