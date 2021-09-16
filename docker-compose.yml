@@ -1,0 +1,82 @@
+#***IMAGE OF MYSQL FOR DOCKER***
+
+# version: '3'
+
+# services:
+#     db:
+#         image: mysql:5.7
+#         volumes:
+#           - .data/:/var/lib/mysql
+#         restart: always
+#         ports:
+#           - "3306:3306"
+#         environment:
+#             MYSQL_ROOT_PASSWORD: "${DATABASE_PASSWORD}"
+#             MYSQL_DATABASE: "${DATABASE_NAME}"
+#             MYSQL_USER: "${DATABASE_USERNAME}"
+#             MYSQL_PASSWORD: "${DATABASE_PASSWORD}"
+#     phpmyadmin:
+#         depends_on:
+#           - db
+#         image: phpmyadmin/phpmyadmin
+#         restart: always
+#         ports:
+#           - '7000:80'
+#         environment:
+#           PMA_HOST: db
+#           MYSQL_ROOT_PASSWORD: demo
+
+#***IMAGE OF MONGO FOR DOCKER***
+
+# version: '3.1'
+
+# services:
+
+#   mongo:
+#     image: mongo
+#     restart: always
+#     environment:
+#       MONGO_INITDB_ROOT_USERNAME: root
+#       MONGO_INITDB_ROOT_PASSWORD: example
+
+#   mongo-express:
+#     image: mongo-express
+#     restart: always
+#     ports:
+#       - 8081:8081
+#     environment:
+#       ME_CONFIG_MONGODB_ADMINUSERNAME: root
+#       ME_CONFIG_MONGODB_ADMINPASSWORD: example
+#       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+
+#***IMAGE OF REDIS FOR DOCKER***
+
+# version: "3.2"
+# services:
+
+#  redis:
+#     image: "redis:alpine"
+
+#     command: redis-server --requirepass sOmE_sEcUrE_pAsS
+
+#     ports:
+#      - "6379:6379"
+
+#     volumes:
+#      - $PWD/redis-data:/var/lib/redis
+#       - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+
+#     environment:
+#      - REDIS_REPLICATION_MODE=master
+
+#     networks:
+#       node_net:
+#         ipv4_address: 172.28.1.4
+
+# # networking for the Redis container
+# networks:
+#   node_net:
+#     ipam:
+#       driver: default
+#       config:
+#         - subnet: 172.28.0.0/16

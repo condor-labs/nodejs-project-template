@@ -9,7 +9,6 @@
 
 This template help you to develop your project of NodeJs, on this template you find popular technologies on the company as:
 ```bash
--CI
 -Docker
 -Jest
 -Dotenv
@@ -18,6 +17,14 @@ This template help you to develop your project of NodeJs, on this template you f
 -Eslint
 -Logger
 -Express
+-Mongo
+-MySQL
+-Redis
+-Metrics
+-Knex
+-Elastic Search
+-Matchbox
+-Sinon
 ```
 
 ## Architecture diagram
@@ -51,6 +58,23 @@ To run the application enter the following command in the console
 $ npm run dev
 
 ```
+
+# API Docs
+
+For more information about methods present on this API visit:
+
+```bash
+
+# copy this url in your browser
+http://localhost:3000/api-docs/
+
+```
+
+In the following image we will see a screenshot of the method that we will find in Swagger
+
+<p align="center">
+  <img src="https://i.ibb.co/VtGcQfC/Screen-Shot-2021-09-15-at-10-56-45-PM.png" width="800"  alt="Endpoint of the Api" />
+</p>
 
 # Test
 

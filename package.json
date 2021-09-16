@@ -4,29 +4,45 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@condor-labs/eslint-config": "^1.0.3",
-    "@condor-labs/logger": "^1.0.2",
-    "@hapi/joi": "^17.1.1",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-myconnection": "^1.0.4",
-    "morgan": "^1.10.0",
-    "swagger-jsdoc": "^6.1.0",
-    "swagger-ui-express": "^4.1.6"
+    "@condor-labs/elasticsearch": "~1.0.7",
+    "@condor-labs/knex-oracle": "~2.0.1",
+    "@condor-labs/logger": "~1.0.2",
+    "@condor-labs/metrics": "~1.4.0",
+    "@condor-labs/mongodb": "~1.1.1",
+    "@condor-labs/mysql": "~1.0.3",
+    "@condor-labs/redis": "~1.0.4",
+    "@hapi/joi": "~17.1.1",
+    "dotenv": "~10.0.0",
+    "express": "~4.17.1",
+    "express-myconnection": "~1.0.4",
+    "morgan": "~1.10.0",
+    "sinon": "^11.1.2",
+    "swagger-ui-express": "~4.1.6"
   },
   "devDependencies": {
-    "jest": "^27.0.6",
-    "nodemon": "^2.0.12"
+    "@condor-labs/eslint-config": "1.0.4",
+    "@condor-labs/matchbox": "1.2.0",
+    "@condor-labs/prettier-config": "1.0.4",
+    "eslint": "7.23.0",
+    "husky": "6.0.0",
+    "jest": "~27.0.6",
+    "nodemon": "~2.0.12"
   },
   "scripts": {
     "test": "jest",
     "dev": "nodemon src/app.js",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.js\"",
-    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.js\" --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.js\" --fix",
+    "format": "prettier \"**/*.{js,jsx,ts,tsx}\" --write",
+    "lint-global": "echo \"Prettier is running...\" && prettier \"**/*.{js,jsx,ts,tsx}\" --write && echo \"ESlint is running...\" && eslint ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sdrestrepo/project-template.git"
+  },
+  "engines": {
+    "node": ">=0.10.3 <15",
+    "npm": "~1.0.20"
   },
   "keywords": [],
   "author": "",
@@ -34,5 +50,11 @@
   "bugs": {
     "url": "https://github.com/sdrestrepo/project-template/issues"
   },
-  "homepage": "https://github.com/sdrestrepo/project-template#readme"
+  "homepage": "https://github.com/sdrestrepo/project-template#readme",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --write"
+    ]
+  }
 }

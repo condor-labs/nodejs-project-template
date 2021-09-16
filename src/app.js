@@ -1,9 +1,14 @@
 const express = require('express');
 const morgan = require('morgan');
-const swaggerJsDoc = require('swagger-jsdoc');
+const logger = require('@condor-labs/logger');
 const swaggerUi = require('swagger-ui-express');
 
 const app = express();
+
+const swaggerDoc = require('./swagger.json');
+
+//Importing Routes
+const projectRoutes = require('./routes/myRoutes');
 
 // settings
 if (process.env.NODE_ENV !== 'test') {
@@ -14,9 +19,13 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(morgan('dev'));
 app.use(express.json());
 
+// Routes
+app.use('/', projectRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
+
 // starting the server
 app.listen(app.get('port'), () => {
-  console.log(`server on port ${app.get('port')}`);
+  logger.info(`server on port ${app.get('port')}`);
 });
 
 module.exports = app;
