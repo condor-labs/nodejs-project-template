@@ -6,6 +6,9 @@
   "dependencies": {
     "@condor-labs/elasticsearch": "~1.0.7",
     "@condor-labs/knex-oracle": "~2.0.1",
+    "@condor-labs/eslint-config": "1.0.4",
+    "@condor-labs/matchbox": "1.2.0",
+    "@condor-labs/prettier-config": "1.0.4",
     "@condor-labs/logger": "~1.0.2",
     "@condor-labs/metrics": "~1.4.0",
     "@condor-labs/mongodb": "~1.1.1",
@@ -20,9 +23,6 @@
     "swagger-ui-express": "~4.1.6"
   },
   "devDependencies": {
-    "@condor-labs/eslint-config": "1.0.4",
-    "@condor-labs/matchbox": "1.2.0",
-    "@condor-labs/prettier-config": "1.0.4",
     "eslint": "7.23.0",
     "husky": "6.0.0",
     "jest": "~27.0.6",
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sdrestrepo/project-template.git"
+    "url": "git+https://github.com/condor-labs/nodejs-project-template.git"
   },
   "engines": {
     "node": ">=0.10.3 <15",
@@ -48,9 +48,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sdrestrepo/project-template/issues"
+    "url": "https://github.com/condor-labs/nodejs-project-template/issues"
   },
-  "homepage": "https://github.com/sdrestrepo/project-template#readme",
+  "homepage": "https://github.com/condor-labs/nodejs-project-template#readme",
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint",
